@@ -33,6 +33,7 @@ def prioritize_features(feature_list):
 
 # Button to process prioritization
 if st.button("Prioritize Features"):
+    print("✅ OpenAI API Key Loaded:", api_key[:5] + "*****")  # Partial key check
     if requests.strip():
         ranked_features = prioritize_features(requests)
         st.subheader("Prioritized Feature List:")
